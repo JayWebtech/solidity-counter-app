@@ -105,7 +105,7 @@ export default function Home() {
               {["increase", "decrease", "reset", "get"].map((action) => (
                 <button
                   key={action}
-                  className={`${(writePending || isConfirming) && loadingButton === action ? 'bg-gray-300' : 'bg-white'} px-4 py-3 rounded-md flex items-center justify-center min-w-[120px]`}
+                  className={`${(writePending || isConfirming) && loadingButton === action ? 'bg-gray-300 cursor-not-allowed' : 'bg-white'} px-4 py-3 rounded-md flex items-center justify-center min-w-[120px]`}
                   onClick={() => handleCounter(action)}
                   disabled={(writePending || isConfirming) && loadingButton === action}
                 >
